@@ -8,7 +8,7 @@ const MovieList = ({ movies }) => {
                 {movies.map((movie) => (
                     <li key={movie.id}>
                         <h3>{movie.title}</h3>
-                        <p>{movie.genre}</p>
+                        <p>{movie.genres}</p>
                         <p>{movie.releaseDate}</p>
                     </li>
                 ))}
