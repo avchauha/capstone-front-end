@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif
+}
+
+body{
+  padding:0; 
+  margin: 0;
+}
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: black;
+  color:white;
+  margin-top:10px;
+}
+
+/* .ReelRatingsApp {
+  background-color: #61dafb;
+  height: 100vh;
+  width: 100vw;
+} */
+
+.MovieContentContainer {
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  height: 100vh;
+  /* width: 100vw; */
+  background-color: blue;
 }
 
 .App-logo {
@@ -36,3 +68,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* new  code */
+
+

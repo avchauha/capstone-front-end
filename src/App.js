@@ -5,6 +5,8 @@ import axios from 'axios'
 import Layout from './components/Layout';
 import HomePage from './components/HomePage/HomePage';
 import ReviewsForm from './components/ReviewsForm/ReviewsForm';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import Trailer from './components/Trailer/Trailer';
 
 const kBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
@@ -60,9 +62,11 @@ function App() {
 
   return (
     <div className='ReelRatingsApp'>
-      <Routes>
+      <NavigationBar/>
+      <Routes className='MovieContentContainer'>
         <Route path="/" element={<Layout/>}>
           <Route path="/" element={<HomePage movies={movies}/>} ></Route>
+          <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
           <Route path="/movies/:movieId/reviews" element={<ReviewsForm handleReviewSubmit={handleReviewSubmit}
           loadReviews={loadReviews} />}/>
         </Route>
