@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.brand-initial {
+    font-family: 'Pacifico', cursive;
+    color: red;
+}
+
+.text-light {
+    font-weight: bold; 
+}
+
+.cursive {
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-family: 'Pacifico', cursive;
+}

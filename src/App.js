@@ -42,9 +42,11 @@ function App() {
   };
 
   // Submit a review for a movie and update the reviews state
-  const handleReviewSubmit = async (movieId, reviewText, setReviews) => {
+  const handleReviewSubmit = async (movieId, reviewText, setReviews, starRating) => {
     try {
-      const response = await axios.post(`${kBaseUrl}/movies/${movieId}/reviews`, { reviewBody: reviewText });
+      const response = await axios.post(`${kBaseUrl}/movies/${movieId}/reviews`, { reviewBody: reviewText, 
+        reviewStars: starRating,
+      });
     
       console.log('Review submitted successfully!', response.data); 
       setReviews((prev) => [...prev, response.data])
@@ -61,14 +63,16 @@ function App() {
 
 
   return (
-    <div className='ReelRatingsApp'>
+    <div className='ReelRatingsApp bg-dark'>
       <NavigationBar/>
       <Routes className='MovieContentContainer'>
         <Route path="/" element={<Layout/>}>
           <Route path="/" element={<HomePage movies={movies}/>} ></Route>
           <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
-          <Route path="/movies/:movieId/reviews" element={<ReviewsForm handleReviewSubmit={handleReviewSubmit}
-          loadReviews={loadReviews} />}/>
+          <Route path="/movies/:movieId/reviews" element={
+            <div className='reviews-container bg-dark'>
+            <ReviewsForm handleReviewSubmit={handleReviewSubmit}
+          loadReviews={loadReviews} /></div>}/>
         </Route>
       </Routes>
     </div>

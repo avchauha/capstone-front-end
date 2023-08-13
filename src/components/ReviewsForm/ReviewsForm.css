@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+
+.container {
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-review-poster {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    width: 40%; 
+}
+
+.movie-review-poster > img {
+    width: 75%;
+    height: 88%;
+    border-radius: 13px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info-container {
+    width: 55%;
+    margin-top: 180px;
+}
+
+.movie-info {
+    margin-bottom: 20px; 
+}
+
+.movie-info h2 {
+    margin-bottom: 30px; 
+    font-weight: bold;
+    font-family: 'Preahvihear';
+    font-size: 34px;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; 
+    
+}
+
+.movie-info p {
+    margin-top: 60px;
+    margin-bottom: 60px; 
+}
+
+.movie-summary {
+    font-size: 19px;
+}
+
+.mb-3 {
+    margin-top: 20px;
+}
+
+.white-text {
+    color:white;
+    font-size: 20px;
+}
+
+.review-container {
+    position: relative;
+    background-color: transparent; 
+    padding: 10px;
+    border-radius: 20px; 
+    box-shadow: 0 0 8px rgb(235, 22, 22), 0 0 12px rgb(235, 22, 22), 0 0 18px rgb(235, 22, 22);
+    margin-bottom: 30px; 
+    border: 1px solid; 
+}
+
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.genres {
+    display: flex;
+    gap: 8px; 
+    margin-bottom: 10px; 
+}
+
+.genre-oval {
+    display: inline-block;
+    background-color: transparent; 
+    color: white; 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    border: 1px solid; 
+    box-shadow: 0 0 10px rgb(235, 22, 22), 0 0 20px rgb(235, 22, 22), 0 0 30px rgb(235, 22, 22);
+}
+

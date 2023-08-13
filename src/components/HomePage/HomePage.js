@@ -1,5 +1,4 @@
 import MovieCarousel from "../MovieCarousel/MovieCarousel";
-// import "./HomePage.css";
 
 
 const HomePage = ({movies}) => {
