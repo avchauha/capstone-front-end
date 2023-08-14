@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import "./ReviewsForm.css"
 import { FaStar } from "react-icons/fa"
 
-const kBaseUrl = process.env.REACT_APP_BACKEND_URL;
+const kBaseUrl = "https://reelratingsapp.onrender.com";
 
 const ReviewsForm = ({ handleReviewSubmit, loadReviews }) => {
     // Get the movieId from the URL using the useParams hook

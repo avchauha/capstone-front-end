@@ -8,7 +8,7 @@ import ReviewsForm from './components/ReviewsForm/ReviewsForm';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Trailer from './components/Trailer/Trailer';
 
-const kBaseUrl = process.env.REACT_APP_BACKEND_URL;
+const kBaseUrl = "https://reelratingsapp.onrender.com";
 
 function App() {
   // Initialize state to store the list of movies
