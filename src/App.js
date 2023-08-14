@@ -18,7 +18,11 @@ function App() {
   const loadReviews = async (movieId, setReviews) => {
     try
     {
-      const response = await axios.get(`${kBaseUrl}/movies/${movieId}/reviews`); 
+      const response = await axios.get(`${kBaseUrl}/movies/${movieId}/reviews`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }); 
       setReviews(response.data.reviews)
     }
     catch(error)
@@ -31,7 +35,10 @@ function App() {
   const getAllMovies = async () => {
     try
     {
-      const response = await axios.get(`${kBaseUrl}/movies`); 
+      const response = await axios.get(`${kBaseUrl}/movies`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }}); 
       setMovies(response.data)
     }
     catch(error)
